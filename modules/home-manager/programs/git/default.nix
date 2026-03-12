@@ -10,10 +10,6 @@
       };
       pull.rebase = true;
     };
-    signing = {
-      key = userConfig.gitKey;
-      signByDefault = true;
-    };
   };
 
   programs.delta = {

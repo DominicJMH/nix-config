@@ -56,7 +56,6 @@
             avatar
             email
             fullName
-            gitKey
             ;
           name = "alexander.nabokikh";
         };
@@ -65,7 +64,6 @@
           wallpaper = ./files/wallpaper.jpg;
           email = "alexander.nabokikh@olx.pl";
           fullName = "Alexander Nabokikh";
-          gitKey = "C5810093";
           name = "nabokikh";
         };
       };

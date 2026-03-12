@@ -47,7 +47,7 @@ Three factory functions create configurations:
 - `mkHomeConfiguration system username hostname` — home-manager user config
 
 Each factory injects `specialArgs`/`extraSpecialArgs` with:
-- `userConfig` — the user's record from the `users` attrset (name, email, avatar, gitKey, wallpaper)
+- `userConfig` — the user's record from the `users` attrset (name, email, avatar, wallpaper)
 - `nixosModules` / `darwinModules` / `nhModules` — string path to the relevant modules directory (used as `"${nixosModules}/common"` in imports)
 - `inputs`, `outputs`, `hostname`
 
@@ -58,7 +58,6 @@ Each factory injects `specialArgs`/`extraSpecialArgs` with:
 | `name` | Linux/macOS username (used for `home.username` and `homeDirectory`) | Your system username |
 | `fullName` | Git `user.name` | Your display name |
 | `email` | Git `user.email` | Your email address |
-| `gitKey` | GPG key ID used for `git commit -S` signing (`programs.git.signing.key`) | Run `gpg --list-secret-keys --keyid-format SHORT` and use the 8-character ID after the key type (e.g. `C5810093` from `rsa4096/C5810093`) |
 | `avatar` | Path to user avatar image file (used by display managers) | A PNG/JPG file path relative to the flake root |
 | `wallpaper` | Path to desktop wallpaper image | A JPG/PNG file path relative to the flake root |
 
@@ -99,7 +98,7 @@ files/
 | `programs/btop` | Resource monitor |
 | `programs/fastfetch` | System info display |
 | `programs/fzf` | Fuzzy finder |
-| `programs/git` | Git + `delta` diffs + GPG signing via `userConfig.gitKey` |
+| `programs/git` | Git + `delta` diffs + GPG commit signing |
 | `programs/go` | Go toolchain env |
 | `programs/gpg` | GPG agent |
 | `programs/k8s` | kubectl, k9s, kubectx |
@@ -133,7 +132,6 @@ On a standard Linux distro (Ubuntu, Arch, Fedora, etc.) you only use `homeConfig
        wallpaper = ./files/wallpaper.jpg;
        email     = "you@example.com";
        fullName  = "Your Name";
-       gitKey    = "ABCD1234";  # from: gpg --list-secret-keys --keyid-format SHORT
        name      = "newuser";   # must match your Linux username
      };
    };
@@ -268,7 +266,6 @@ users = {
     wallpaper = ./files/wallpaper.jpg;
     email     = "you@example.com";
     fullName  = "Your Name";
-    gitKey    = "ABCD1234";          # gpg --list-secret-keys --keyid-format SHORT
     name      = "yourname";          # must match your Linux username exactly
   };
 };
