@@ -49,10 +49,9 @@ To add a new machine with a new user to your NixOS or nix-darwin configuration, 
    users = {
      # Existing users...
      newuser = {
-       avatar = ./files/avatar/face;
+       avatar = ./files/avatar;
        email = "newuser@example.com";
        fullName = "New User";
-       gitKey = "YOUR_GIT_KEY";
        name = "newuser";
      };
    };

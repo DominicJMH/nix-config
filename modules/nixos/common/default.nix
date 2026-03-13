@@ -37,7 +37,7 @@
     ];
     loader.efi.canTouchEfiVariables = true;
     loader.systemd-boot.enable = true;
-    loader.timeout = 0;
+    loader.timeout = 10;
     plymouth.enable = true;
 
     # v4l (virtual camera) module settings
@@ -86,7 +86,7 @@
   # Enable Wayland support in Chromium and Electron based applications
   # Set cursor size
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
+    # NIXOS_OZONE_WL = "1";
     XCURSOR_SIZE = "24";
   };
 

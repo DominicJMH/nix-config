@@ -8,8 +8,8 @@
   imports = [
     ../programs/aerospace
     ../programs/alacritty
-    ../programs/albert
-    ../programs/atuin
+    # ../programs/albert
+../programs/atuin
     ../programs/bat
     ../programs/brave
     ../programs/btop
@@ -75,7 +75,7 @@
       anki
       tesseract
       unzip
-      wl-clipboard
+      # wl-clipboard
     ];
 
   # Catppuccin flavor and accent

@@ -56,8 +56,16 @@
             avatar
             email
             fullName
+            wallpaper
             ;
           name = "alexander.nabokikh";
+        };
+        dominic = {
+          avatar = ./files/avatar;
+          wallpaper = ./files/wallpaper.jpg;
+          email = "dominic.mills@tii.ae";
+          fullName = "Dominic Mills";
+          name = "dominic";
         };
         nabokikh = {
           avatar = ./files/avatar;
@@ -120,7 +128,7 @@
     in
     {
       nixosConfigurations = {
-        energy = mkNixosConfiguration "energy" "nabokikh";
+        nixos = mkNixosConfiguration "nixos" "dominic";
       };
 
       darwinConfigurations = {
@@ -129,9 +137,8 @@
 
       homeConfigurations = {
         "alexander.nabokikh@PL-OLX-KCGXHGK3PY" =
-          mkHomeConfiguration "aarch64-darwin" "alexander.nabokikh"
-            "PL-OLX-KCGXHGK3PY";
-        "nabokikh@energy" = mkHomeConfiguration "x86_64-linux" "nabokikh" "energy";
+          mkHomeConfiguration "aarch64-darwin" "alexander.nabokikh" "PL-OLX-KCGXHGK3PY";
+        "dominic@nixos" = mkHomeConfiguration "x86_64-linux" "dominic" "nixos";
       };
 
     };
