@@ -1,0 +1,12 @@
+1. Rebuild and enroll
+  sudo nixos-rebuild switch --flake .#nixos                                                                                                                                                                                                   
+  fprintd-enroll dominic   # scan your finger 5 times as prompted
+                                                                                                                                                                                                                                              
+  2. Verify enrollment worked                                                                                                                                                                                                               
+  fprintd-list dominic
+
+  3. Test fingerprint auth
+  sudo echo "works"   # should prompt for fingerprint instead of password
+
+  If sudo shows [sudo] password for dominic: instead of a fingerprint prompt, swipe anyway — PAM often accepts fingerprint even when the prompt text says "password". If you want an explicit prompt, fprintd-verify dominic tests the reader
+  directly without any sudo involvement.

@@ -137,8 +137,6 @@
     fi
   '';
 
-  # Passwordless sudo
-  security.sudo.wheelNeedsPassword = false;
 
   # System packages
   environment.systemPackages = with pkgs; [
