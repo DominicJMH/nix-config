@@ -1,5 +1,13 @@
 { pkgs, ... }:
 {
+  # nixd and nixfmt must be on the system PATH so the nix-ide extension can
+  # find them. They cannot be installed only as Neovim extraPackages, which
+  # places them in Neovim's private wrapper PATH only.
+  home.packages = with pkgs; [
+    nixd
+    nixfmt
+  ];
+
   programs.vscode = {
     enable = true;
     package = pkgs.vscode;
@@ -49,7 +57,7 @@
       "workbench.colorTheme" = "Catppuccin Mocha";
       "workbench.iconTheme" = "catppuccin-mocha";
 
-      # Nix language server (nixd is installed via neovim module)
+      # Nix language server
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nixd";
       "[nix]"."editor.defaultFormatter" = "jnoortheen.nix-ide";

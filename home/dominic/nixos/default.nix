@@ -7,6 +7,7 @@
     "${nhModules}/programs/blender"
     "${nhModules}/programs/godot"
     "${nhModules}/programs/aseprite"
+    "${nhModules}/programs/spicetify"
     # "${nhModules}/desktop/niri"
   ];
 
