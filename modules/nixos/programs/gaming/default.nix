@@ -42,4 +42,17 @@
 
   # Add gamemode group to user
   users.users.${userConfig.name}.extraGroups = [ "gamemode" ];
+
+  # Lutris game launcher + Wine for Windows game compatibility
+  environment.systemPackages = with pkgs; [
+    lutris
+    wineWow64Packages.stable
+  ];
+
+  # CoreCtrl: AMD GPU/CPU tuning (unlocks all power/clock controls)
+  programs.corectrl.enable = true;
+  hardware.amdgpu.overdrive = {
+    enable = true;
+    ppfeaturemask = "0xffffffff";
+  };
 }

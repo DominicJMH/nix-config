@@ -37,6 +37,12 @@
     ];
     loader.efi.canTouchEfiVariables = true;
     loader.systemd-boot.enable = true;
+    loader.systemd-boot.extraEntries = {
+      "ubuntu.conf" = ''
+        title   Ubuntu
+        efi     /EFI/ubuntu/shimx64.efi
+      '';
+    };
     loader.timeout = 10;
     plymouth.enable = true;
 
@@ -58,7 +64,7 @@
   };
 
   # Timezone
-  time.timeZone = "Europe/Warsaw";
+  time.timeZone = "Asia/Dubai";
 
   # Internationalization
   i18n.defaultLocale = "en_US.UTF-8";
@@ -99,6 +105,9 @@
   # Enable devmon for device management
   services.devmon.enable = true;
 
+  # Enable Cloudflare WARP
+  services.cloudflare-warp.enable = true;
+
   # Enable PipeWire for sound
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -114,6 +123,7 @@
   users.users.${userConfig.name} = {
     description = userConfig.fullName;
     extraGroups = [
+      "kvm"
       "networkmanager"
       "video"
       "wheel"

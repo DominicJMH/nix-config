@@ -1,0 +1,49 @@
+https://github.com/garnix-io/nixos-compose
+
+https://man.archlinux.org/man/extra/nix/nix-copy-closure.1.en
+
+https://github.com/illegalprime/nixos-on-arm
+
+https://www.kdab.com/using-nix-as-a-yocto-alternative/
+
+https://www.reddit.com/r/NixOS/comments/ho5y0p/commercial_embedded_linux_project_using_nix_as_a/
+
+https://www.reddit.com/r/NixOS/comments/1m33oc6/how_nixos_made_me_an_idiot_when_it_comes_to/
+
+https://discourse.nixos.org/t/build-a-yocto-rootfs-inside-nix/2643
+
+https://promwad.com/news/embedded-build-systems-evolution-makefile-nix-guix-reproducible-firmware
+
+https://www.youtube.com/watch?v=PF3qgfR0XP0 [Finally a Settings App for Hyprland]
+https://www.youtube.com/@saneAspect/videos
+
+https://www.youtube.com/watch?v=OFmxKgaLN80 [Why Companies Are Quietly Rehiring Software Engineers]
+https://www.youtube.com/watch?v=_2C2CNmK7dQ [Senior Engineer tries Vibe Coding.]
+
+https://www.youtube.com/watch?v=LSei3bL7rGU [How Invincible Deconstructs Masculinity]
+
+https://www.youtube.com/watch?v=F2FOc8PCyJk [How to ACTUALLY Stay Anonymous Online (VERY SPECIFIC)]
+
+https://www.youtube.com/watch?v=Gv4sDL9Ljww [Why Fighter Jets Ban 90% of C++ Features]
+
+https://www.youtube.com/watch?v=YAUbXCdhox0 [Why the Vilturmites turned against Thragg | Invincible season 4]
+
+https://discourse.nixos.org/t/add-other-linux-distros-entry-to-systemd-boot-menu/68038
+https://linus.schreibt.jetzt/posts/ubuntu-images.html
+
+https://www.reddit.com/r/NixOS/comments/1cuambo/installed_nixos_alongside_other_linux_distro_and/
+
+https://tomichen.com/blog/posts/20251223-repairing-nixos-bootloader/
+
+https://gist.github.com/clample/e3c51bf8026098fded9628d3e0ee7967
+
+https://discourse.nixos.org/t/system-with-nixos-how-to-add-another-extra-distribution/5767/16
+
+https://discourse.nixos.org/t/system-with-nixos-how-to-add-another-extra-distribution/5767/16
+
+https://www.reddit.com/r/NixOS/comments/2bvgr4/nixos_dual_boot_grub_setup/
+
+https://search.brave.com/search?q=qspi&source=desktop&summary=1&conversation=08f9564f428ca4930f8d41896962f6d33c96
+
+https://www.google.com/search?q=qspi&sca_esv=66df0cea068f4c14&source=hp&ei=HI3gabKFDILUkdUP--uM4Qg&iflsig=AFdpzrgAAAAAaeCbLHqvtbPmV9bk6fjXzu61JJ0gRK2Q&ved=0ahUKEwiyg66J6vGTAxUCaqQEHfs1I4wQ4dUDCBQ&uact=5&oq=qspi&gs_lp=Egdnd3Mtd2l6IgRxc3BpMgsQLhiABBjRAxjHATIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyCxAuGIAEGMcBGK8BMgUQABiABDIFEAAYgAQyCxAuGIAEGMcBGK8BMgsQLhiABBjHARivAUisCVAAWKMCcAB4AJABAJgB4QGgAbIGqgEFMC4xLjO4AQPIAQD4AQGYAgSgAuUGwgIIEAAYgAQYsQPCAgsQABiABBixAxiDAcICDhAAGIAEGLEDGIMBGIoFmAMAkgcDMi00oAe3ILIHAzItNLgH5QbCBwUyLTMuMcgHJIAIAA&sclient=gws-wiz
+

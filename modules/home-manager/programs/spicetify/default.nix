@@ -19,6 +19,11 @@ in
     enabledExtensions = with spicePkgs.extensions; [
       keyboardShortcut
       shuffle
+      adblock
+    ];
+
+    enabledCustomApps = with spicePkgs.apps; [
+      marketplace
     ];
   };
 }

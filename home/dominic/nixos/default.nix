@@ -3,11 +3,16 @@
   imports = [
     "${nhModules}/common"
     "${nhModules}/misc/gtk"
+    "${nhModules}/programs/firefox"
+    "${nhModules}/programs/davinci-resolve"
+    "${nhModules}/programs/input-leap"
+    "${nhModules}/programs/zoxide"
     "${nhModules}/programs/vscode"
     "${nhModules}/programs/blender"
     "${nhModules}/programs/godot"
     "${nhModules}/programs/aseprite"
     "${nhModules}/programs/spicetify"
+    "${nhModules}/programs/swappy"
     # "${nhModules}/desktop/niri"
   ];
 
@@ -28,7 +33,11 @@
   programs.alacritty.enable = lib.mkForce false;
 
 
-  home.packages = [ pkgs.firefox ];
+  home.packages = with pkgs; [
+    vlc
+    lua
+    love
+  ];
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   home.stateVersion = "25.05";

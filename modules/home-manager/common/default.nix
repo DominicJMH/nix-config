@@ -22,6 +22,7 @@
     ../programs/lazygit
     ../programs/neovim
     ../programs/saml2aws
+    ../programs/slack
     ../programs/starship
     ../programs/telegram
     ../programs/tmux
@@ -77,6 +78,11 @@
       unzip
       # wl-clipboard
     ];
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
 
   # Catppuccin flavor and accent
   catppuccin = {
