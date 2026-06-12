@@ -121,7 +121,7 @@ GPU rendering support is configured at the system level. Add to your host's `def
 }
 ```
 
-> The `energy` host uses `common-gpu-amd` from nixos-hardware, so ROCm is the relevant path for that machine.
+> If your NixOS machine uses an AMD GPU, ROCm is the relevant path.
 
 ---
 
@@ -227,7 +227,7 @@ DaVinci Resolve works best when configured at the system level. Add to your host
 }
 ```
 
-Import it in `hosts/energy/default.nix`:
+Import it in your NixOS host config, for example `hosts/nixos/default.nix`:
 
 ```nix
 imports = [
@@ -239,7 +239,7 @@ imports = [
 ### Known issues on NixOS
 
 - **Crashes on launch**: DaVinci Resolve often requires `davinci-resolve` to be run via its own wrapper. The nixpkgs package handles this but may need `OCIO` or `opencl-icd-loader` adjustments.
-- **AMD GPU**: The `energy` host uses AMD, which works well with the free version of DaVinci Resolve via ROCm/OpenCL.
+- **AMD GPU**: If your machine uses AMD, the free version of DaVinci Resolve generally works via ROCm/OpenCL.
 - **Wayland**: DaVinci Resolve runs under XWayland — it does not natively support Wayland. This is handled automatically by both Niri and Hyprland.
 - **Studio version**: `pkgs.davinci-resolve-studio` requires a dongle or licence activation and is otherwise identical in setup.
 
@@ -260,7 +260,7 @@ This works but you lose the ability to set system-wide OpenCL config from the sa
 
 ## Claude Code
 
-Claude Code is in nixpkgs as two variants: `claude-code` (built from source) and `claude-code-bin` (prebuilt binary). The `energy` host already has `opencode` installed via `modules/home-manager/common/default.nix` — Claude Code fits naturally alongside it.
+Claude Code is in nixpkgs as two variants: `claude-code` (built from source) and `claude-code-bin` (prebuilt binary). This repo already has `opencode` installed via `modules/home-manager/common/default.nix` — Claude Code fits naturally alongside it.
 
 ### Option A — add to `common` packages (all machines)
 

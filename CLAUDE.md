@@ -6,16 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 # NixOS rebuild
-sudo nixos-rebuild switch --flake .#energy
-sudo nixos-rebuild switch --flake .#nabokikh-z13
+sudo nixos-rebuild switch --flake .#nixos
 
 # macOS (nix-darwin) rebuild
-darwin-rebuild switch --flake .#nabokikh-mac
+darwin-rebuild switch --flake .#dominic-macbook
 
 # Home-Manager (standalone, after system rebuild)
-home-manager switch --flake .#nabokikh@energy
-home-manager switch --flake .#nabokikh@nabokikh-z13
-home-manager switch --flake .#nabokikh@nabokikh-mac
+home-manager switch --flake .#dominic@nixos
+home-manager switch --flake .#dominic@dominic-macbook
 
 # Update all flake inputs
 nix flake update
@@ -29,10 +27,9 @@ make bootstrap-mac
 
 ## Architecture
 
-This is a Nix Flakes-based configuration managing NixOS, nix-darwin, and Home-Manager across three machines:
-- **energy**: AMD desktop (NixOS + Hyprland)
-- **nabokikh-z13**: ThinkPad Z13 laptop (NixOS + Hyprland)
-- **nabokikh-mac**: Apple Silicon (nix-darwin + Aerospace)
+This is a Nix Flakes-based configuration managing NixOS, nix-darwin, and Home-Manager for Dominic's machines:
+- **nixos**: NixOS workstation
+- **dominic-macbook**: Apple Silicon macOS machine
 
 ### Key Pattern: Configuration Flow
 

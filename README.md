@@ -17,7 +17,7 @@ It is structured to easily accommodate multiple machines and user configurations
 ## Structure
 
 - `flake.nix`: The flake itself, defining inputs and outputs for NixOS, nix-darwin, and Home Manager configurations.
-- `hosts/`: NixOS and nix-darwin configurations for each machine (`energy`, `PL-OLX-KCGXHGK3PY`).
+- `hosts/`: NixOS and nix-darwin configurations for each machine (`nixos`, `dominic-macbook`).
 - `home/`: Home Manager configurations for each user on each machine.
 - `files/`: Miscellaneous configuration files, scripts, avatars, and screenshots.
 - `modules/`: Reusable platform-specific modules:

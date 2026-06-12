@@ -36,6 +36,12 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Codex CLI packaged as a flake for Linux and macOS
+    codex-cli-nix = {
+      url = "github:sadjow/codex-cli-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -57,28 +63,12 @@
 
       # Define user configurations
       users = {
-        "alexander.nabokikh" = {
-          inherit (users.nabokikh)
-            avatar
-            email
-            fullName
-            wallpaper
-            ;
-          name = "alexander.nabokikh";
-        };
         dominic = {
           avatar = ./files/avatar;
           wallpaper = ./files/wallpaper.jpg;
           email = "dominic.mills@tii.ae";
           fullName = "Dominic Mills";
           name = "dominic";
-        };
-        nabokikh = {
-          avatar = ./files/avatar;
-          wallpaper = ./files/wallpaper.jpg;
-          email = "alexander.nabokikh@olx.pl";
-          fullName = "Alexander Nabokikh";
-          name = "nabokikh";
         };
       };
 
@@ -138,13 +128,13 @@
       };
 
       darwinConfigurations = {
-        "PL-OLX-KCGXHGK3PY" = mkDarwinConfiguration "PL-OLX-KCGXHGK3PY" "alexander.nabokikh";
+        "dominic-macbook" = mkDarwinConfiguration "dominic-macbook" "dominic";
       };
 
       homeConfigurations = {
-        "alexander.nabokikh@PL-OLX-KCGXHGK3PY" =
-          mkHomeConfiguration "aarch64-darwin" "alexander.nabokikh" "PL-OLX-KCGXHGK3PY";
         "dominic@nixos" = mkHomeConfiguration "x86_64-linux" "dominic" "nixos";
+        "dominic@dominic-macbook" =
+          mkHomeConfiguration "aarch64-darwin" "dominic" "dominic-macbook";
       };
 
     };

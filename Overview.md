@@ -1,6 +1,6 @@
 # Overview
 
-This is a NixOS and nix-darwin configuration repository using Nix Flakes. It manages multiple machines (`energy` running NixOS, `PL-OLX-KCGXHGK3PY` running macOS) and users (`nabokikh`, `alexander.nabokikh`) with shared modular configurations.
+This is a NixOS and nix-darwin configuration repository using Nix Flakes. It manages Dominic's NixOS and macOS machines with shared modular configurations.
 
 ## Common Commands
 
@@ -10,12 +10,12 @@ This is a NixOS and nix-darwin configuration repository using Nix Flakes. It man
 # NixOS (auto-detects hostname)
 make nixos-rebuild
 # or explicitly:
-sudo nixos-rebuild switch --flake .#energy
+sudo nixos-rebuild switch --flake .#nixos
 
 # macOS
 make darwin-rebuild
 # or explicitly:
-sudo darwin-rebuild switch --flake .#PL-OLX-KCGXHGK3PY
+sudo darwin-rebuild switch --flake .#dominic-macbook
 ```
 
 ### Apply home-manager configuration
@@ -23,8 +23,8 @@ sudo darwin-rebuild switch --flake .#PL-OLX-KCGXHGK3PY
 ```sh
 make home-manager-switch
 # or explicitly:
-home-manager switch --flake .#nabokikh@energy
-home-manager switch --flake .#alexander.nabokikh@PL-OLX-KCGXHGK3PY
+home-manager switch --flake .#dominic@nixos
+home-manager switch --flake .#dominic@dominic-macbook
 ```
 
 ### Validate and update
@@ -332,7 +332,7 @@ The `upstream-sync` branch represents a large refactoring. The items below were 
 | `steam.nix` | Basic Steam enable + remote play firewall | **Replaced** by `modules/nixos/programs/gaming` (adds GameMode, CPU governor, low-latency audio) |
 | `corectrl.nix` | AMD GPU overclocking/monitoring via CoreCtrl + polkit rule | **Removed** (GPU tuning now handled by the gaming module) |
 | `gnome.nix` | Enabled GNOME, excluded unwanted default apps | **Removed** (desktop switched to Niri/Hyprland) |
-| `laptop.nix` | TLP power management (CPU governor, battery charge thresholds) | **Removed** (the `nabokikh-z13` laptop host is gone; desktop `energy` doesn't need TLP) |
+| `laptop.nix` | TLP power management (CPU governor, battery charge thresholds) | **Removed** |
 | `lutris.nix` | Lutris game launcher + Wine | **Removed** |
 | `ollama.nix` | Ollama local AI model runner (with optional AMD ROCm acceleration) | **Removed** |
 
@@ -359,8 +359,6 @@ The `upstream-sync` branch represents a large refactoring. The items below were 
 
 | Host | What it was |
 |---|---|
-| `nabokikh-z13` | Asus ROG Zephyrus G13 laptop running NixOS |
-| `nabokikh-mac` | Old macOS machine (renamed to `PL-OLX-KCGXHGK3PY`) |
 
 #### Removed overlays
 
