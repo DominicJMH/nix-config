@@ -1,4 +1,5 @@
 {
+  inputs,
   userConfig,
   lib,
   pkgs,
@@ -6,7 +7,7 @@
 }:
 {
   imports = [
-    ../programs/aerospace
+    # ../programs/aerospace
     ../programs/alacritty
     # ../programs/albert
 ../programs/atuin
@@ -49,6 +50,7 @@
     [
       awscli2
       dig
+      inputs.codex-cli-nix.packages.${pkgs.system}.default
       eza
       fd
       github-copilot-cli
